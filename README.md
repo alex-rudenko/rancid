@@ -1,4 +1,4 @@
-**<<< Rancid devices list and configuration backup >>> 
+**<<< Rancid devices list and configuration backup >>> **
 ```
 
  1. Script extracts configured folders structure from /etc/rancid/rancid.conf
@@ -10,5 +10,4 @@
  3. Saves backup as tar.gz archive to /backup-rancid/ folder.
     Backup file name has format:   YYYYMMDD-HHMMSS.tar.gz   (date and time of backup creation).
 
- <<< End of story >>> 
 ```
