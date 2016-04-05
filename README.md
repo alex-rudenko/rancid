@@ -1,4 +1,4 @@
-**<<< Rancid devices list and configuration backup >>> **
+** Rancid devices list and configuration backup:  **
 ```
 
  1. Script extracts configured folders structure from /etc/rancid/rancid.conf
