@@ -9,6 +9,6 @@
     - configs/ folder (contains config files for all devices from router.db file)
 
  3. Saves backup as tar.gz archive to /backup-rancid/ folder.
-    Backup file name has format:   YYYYMMDD-HHMMSS.tar.gz   (date and time of backup creation).
+    Backup file name has format: YYYYMMDD-HHMMSS.tar.gz (date and time of backup creation).
 
 ```
