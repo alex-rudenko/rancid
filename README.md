@@ -31,3 +31,6 @@ printf '11\n'
 ```bash
 git submodule update --init --recursive
 ```
+```bash
+echo "cookbook_path            [\"$SRC/chef/cookbooks", "$SRC/chef/external-cookbooks\"]" >> ~/.chef/knife.rb
+```
