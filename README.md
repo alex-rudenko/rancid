@@ -28,3 +28,6 @@ rm -r /tmp/111
 
 printf '11\n'
 ```
+```bash
+git submodule update --init --recursive
+```
