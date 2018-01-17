@@ -25,4 +25,6 @@ echo $HOME
 
 cp mv
 rm -r /tmp/111
+
+printf '11\n'
 ```
