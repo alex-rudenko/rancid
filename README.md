@@ -12,3 +12,10 @@
     Backup file name has format: YYYYMMDD-HHMMSS.tar.gz (date and time of backup creation).
 
 ```
+
+
+```bash
+curl http://127.0.0.1
+ls /
+ping www.google.com
+```
