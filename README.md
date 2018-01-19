@@ -37,7 +37,7 @@ echo "cookbook_path            [\"$SRC/chef/cookbooks", "$SRC/chef/external-cook
 
 
 
-# No cookbook on server, skip version compare.
+**No cookbook on server, skip version compare.**
 ```
 <<< Cookbook: simple_iptables  >>>
   !!!! COOKBOOK ... no cookbook simple_iptables on ChefServer, skipping json check...
