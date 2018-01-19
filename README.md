@@ -34,3 +34,52 @@ git submodule update --init --recursive
 ```bash
 echo "cookbook_path            [\"$SRC/chef/cookbooks", "$SRC/chef/external-cookbooks\"]" >> ~/.chef/knife.rb
 ```
+
+
+
+# No cookbook on server, skip version compare.
+```
+<<< Cookbook: simple_iptables  >>>
+  !!!! COOKBOOK ... no cookbook simple_iptables on ChefServer, skipping json check...
+```
+
+# Server version matches all envs for yola_apache2 cookbook.
+```
+<<< Cookbook: yola_apache2  >>>
+    All json files match server version... ( 0.4.13 )
+```
+
+# One of envs does not contain apt cookbook. All other envs have cookbook & match server version.
+```
+<<< Cookbook: apt  >>>
+  !!!! COOKBOOK ... no cookbook apt in file production-inet.json
+    All other json files match server version... ( 2.7.0 )
+```
+
+# One of envs has not-matching version. All other envs versions match server version.
+```
+<<< Cookbook: apt  >>>
+  !!!! VERSION ... file  production-usa-east.json apt = ( 2.6.0 ), but ChefServer apt = ( 2.7.0 )
+    All other json files match server version... ( 2.7.0 )
+```
+
+# Combination of cases
+```
+<<< Cookbook: apt  >>>
+  !!!! COOKBOOK ... no cookbook apt in file production-inet.json
+  !!!! VERSION ... file  production-usa-east.json apt = ( 2.6.0 ), but ChefServer apt = ( 2.7.0 )
+    All other json files match server version... ( 2.7.0 )
+```
+
+# All envs versions does not match server version.
+```
+<<< Cookbook: chef-client  >>>
+  !!!! VERSION ... file  production-inet.json chef-client = ( 4.3.1 ), but ChefServer chef-client = ( 8.1.8 )
+  !!!! VERSION ... file  integration-usa-east.json chef-client = ( 4.3.1 ), but ChefServer chef-client = ( 8.1.8 )
+  !!!! VERSION ... file  production-usa-east.json chef-client = ( 4.3.1 ), but ChefServer chef-client = ( 8.1.8 )
+  !!!! VERSION ... file  ct.json chef-client = ( 4.3.1 ), but ChefServer chef-client = ( 8.1.8 )
+  !!!! VERSION ... file  qa-inet.json chef-client = ( 4.3.1 ), but ChefServer chef-client = ( 8.1.8 )
+  !!!! VERSION ... file  sf.json chef-client = ( 4.3.1 ), but ChefServer chef-client = ( 8.1.8 )
+  !!!! VERSION ... file  production-vpc-us-east-1.json chef-client = ( 4.3.1 ), but ChefServer chef-client = ( 8.1.8 )
+  !!!! VERSION ... file  qa-vpc-us-east-1.json chef-client = ( 4.3.1 ), but ChefServer chef-client = ( 8.1.8 )
+```
